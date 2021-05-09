@@ -8,7 +8,7 @@ const Product = ({ id, name, img, price }) => {
     <div className="product-container">
       <h2>{name}</h2>
       <img src={img} alt={name} height="150px" />
-      <div className="product-container-price">{price}₪</div>
+      <div className="product-container-price">₪{price}</div>
       <div className="product-container-buttons-container">
         <NavLink
           to={`/productDetail/${id}`}

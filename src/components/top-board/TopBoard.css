@@ -25,17 +25,17 @@
 @media (max-width: 960px) {
   .top_board-container {
     height: 170px;
-    width: 300px;
+    width: 320px;
   }
 
   .top_board-container > h2 {
     font-size: 1.6rem;
-    color: grey;
-    -webkit-text-stroke: 1px transparent;
+    color: white;
+    -webkit-text-stroke: 1px transparent white;
   }
 
   .top_board-container > h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     width: 220px;
   }
 }
