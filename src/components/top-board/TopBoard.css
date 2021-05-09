@@ -29,13 +29,13 @@
   }
 
   .top_board-container > h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: grey;
     -webkit-text-stroke: 1px transparent;
   }
 
   .top_board-container > h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     width: 200px;
   }
 }
