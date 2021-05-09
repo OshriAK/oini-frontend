@@ -1,0 +1,36 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container-input {
+  margin-right: 15px;
+  border: none;
+  border-bottom: 1px black solid;
+  background-color: transparent;
+  text-align: center;
+  padding: 6px;
+  width: 150px;
+  font-size: 1rem;
+}
+
+.search-container-input:focus {
+  outline: none;
+}
+
+.fa-search {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .search-container {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-container {
+    display: none;
+  }
+}

@@ -1,0 +1,31 @@
+.productDetail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productDetail-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #eee;
+  padding: 100px;
+  margin-right: 100px;
+}
+
+.productDetail-detail > h1 {
+  border-bottom: 1px solid grey;
+}
+
+@media (max-width: 960px) {
+  .productDetail-container {
+    flex-direction: column;
+  }
+
+  .productDetail-detail {
+    max-width: 350px;
+    margin: 0px;
+    padding: 40px;
+  }
+}
