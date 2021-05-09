@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import Button from '../button/Button';
 import './Product.css';
 
 const Product = ({ id, name, img, price, detail }) => {
@@ -17,7 +16,9 @@ const Product = ({ id, name, img, price, detail }) => {
         >
           פרטים
         </NavLink>
-        <Button text="הוסף לעגלה" color="color1" />
+        <button className="button-addToCart" onClick={() => {}}>
+          הוסף לעגלה
+        </button>
       </div>
     </div>
   );
