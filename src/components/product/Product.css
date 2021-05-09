@@ -45,5 +45,5 @@
 }
 
 .button-addToCart:hover {
-  opacity: 70%;
+  border: 1px solid grey;
 }

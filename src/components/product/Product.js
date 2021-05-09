@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import './Product.css';
 
-const Product = ({ id, name, img, price, detail }) => {
+const Product = ({ id, name, img, price }) => {
   return (
     <div className="product-container">
       <h2>{name}</h2>
