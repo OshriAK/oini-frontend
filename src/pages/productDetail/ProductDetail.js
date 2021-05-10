@@ -9,11 +9,7 @@ const ProductDetail = () => {
   const currentProduct = computers.find((prod) => prod.id === id);
   return (
     <div className="productDetail-container">
-      <img
-        src={`../${currentProduct.image}`}
-        alt={currentProduct.name}
-        height="250px"
-      />
+      <img src={`../${currentProduct.image}`} alt={currentProduct.name} />
       <div className="productDetail-detail">
         <h1>{currentProduct.name}</h1>
         <h2>מחיר:₪{currentProduct.price}</h2>
@@ -22,6 +18,10 @@ const ProductDetail = () => {
         <h2>זכרון מחשב: {currentProduct.detail.computerMemorySize}GB</h2>
         <h2>גודל מסך: "{currentProduct.detail.screenSize}"</h2>
         <h2>מערכת הפעלה: {currentProduct.detail.operatingSystem}</h2>
+        <div className="productDetail-button-container">
+          <button className="productDetail-addToCart-button">הוסף לעגלה</button>
+          <button className="productDetail-buyNow-button"> קנייה מיידית</button>
+        </div>
       </div>
     </div>
   );
