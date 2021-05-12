@@ -64,7 +64,7 @@
   }
 
   .productDetail-container > img {
-    height: 180px;
+    height: 160px;
   }
 
   .productDetail-detail {
@@ -73,7 +73,12 @@
     padding: 40px;
   }
 
+  .productDetail-addToCart-button {
+    padding: 12px 12px;
+    margin-left: 12px;
+  }
+
   .productDetail-buyNow-button {
-    padding: 12px 36px;
+    padding: 12px 30px;
   }
 }

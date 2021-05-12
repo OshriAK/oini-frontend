@@ -1,10 +1,14 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import Search from '../search/Search';
 
 import './Navbar.css';
 
 const Navbar = ({ click }) => {
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+
   return (
     <nav className="navbar">
       {/* logo */}
@@ -19,7 +23,7 @@ const Navbar = ({ click }) => {
       <ul className="navbar__links">
         <li>
           <NavLink to="/cart" className="navbar-single-link">
-            <span>0</span>
+            {cartItems.length !== 0 && <span>{cartItems.length}</span>}
             <i className="fas fa-shopping-cart"></i>
           </NavLink>
         </li>

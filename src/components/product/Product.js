@@ -1,9 +1,18 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+
+import { addToCart } from '../../redux/actions/cartActions';
 
 import './Product.css';
 
 const Product = ({ id, name, img, price }) => {
+  const dispatch = useDispatch();
+
+  const addToCartHandler = () => {
+    dispatch(addToCart(id, 1));
+  };
+
   return (
     <div className="product-container">
       <h2>{name}</h2>
@@ -16,7 +25,7 @@ const Product = ({ id, name, img, price }) => {
         >
           פרטים
         </NavLink>
-        <button className="button-addToCart" onClick={() => {}}>
+        <button className="button-addToCart" onClick={addToCartHandler}>
           הוסף לעגלה
         </button>
       </div>

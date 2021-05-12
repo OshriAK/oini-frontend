@@ -1,17 +1,16 @@
 import React from 'react';
 
 import Product from '../product/Product';
-import { computers } from '../../data';
 import './ProductList.css';
 
-const ProductList = () => {
+const ProductList = ({ products }) => {
   return (
     <div className="products-list-container">
-      {computers.map((prod) => {
+      {products.map((prod) => {
         return (
           <Product
-            key={prod.id}
-            id={prod.id}
+            key={prod._id}
+            id={prod._id}
             name={prod.name}
             img={prod.image}
             price={prod.price}

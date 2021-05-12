@@ -31,10 +31,10 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 8px;
-  right: 30px;
-  color: black;
-  background-color: white;
+  bottom: 12px;
+  right: 22px;
+  color: white;
+  background-color: #f02020;
   height: 30px;
   width: 30px;
   border-radius: 50%;

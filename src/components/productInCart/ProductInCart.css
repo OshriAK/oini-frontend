@@ -8,12 +8,12 @@
 }
 
 .productInCart-container > img {
-  height: 70px;
+  height: 50px;
 }
 
-.productInCart-quntity-input {
+.productInCart-quntity-select {
   padding: 6px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .productInCart-delete-button {
@@ -39,17 +39,20 @@
   }
 
   .productInCart-container > img {
-    height: 36px;
+    height: 32px;
   }
 
   .productInCart-container > div {
-    font-size: 12px;
+    font-size: 14px;
   }
 
-  .productInCart-quntity-input {
-    padding: 6px 0px;
+  .productInCart-container > h3 {
     font-size: 14px;
-    text-align: center;
+  }
+
+  .productInCart-quntity-select {
+    padding: 4px;
+    font-size: 14px;
   }
 
   .productInCart-delete-button {
@@ -61,6 +64,6 @@
   }
 
   .productInCart-container > h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }

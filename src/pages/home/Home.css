@@ -8,5 +8,6 @@
 
 .home-container-title {
   border-bottom: 4px black solid;
-  margin: 10px 0px;
+  margin: 15px 0px;
+  font-size: 26px;
 }
