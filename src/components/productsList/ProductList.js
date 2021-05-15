@@ -12,6 +12,7 @@ const ProductList = ({ products }) => {
             key={prod._id}
             id={prod._id}
             name={prod.name}
+            model={prod.model}
             img={prod.image}
             price={prod.price}
             detail={prod.detail}

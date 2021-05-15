@@ -10,7 +10,12 @@ import Footer from './components/footer/Footer';
 //pages
 import Home from './pages/home/Home';
 import Cart from './pages/cart/Cart';
+import Signin from './pages/signin/Signin';
+import Register from './pages/register/Register';
 import ProductDetail from './pages/productDetail/ProductDetail';
+import ShippingAddress from './pages/shippingAddress/ShippingAddress';
+import Payment from './pages/payment/Payment';
+import FinalPage from './pages/finalPage/FinalPage';
 
 import './App.css';
 
@@ -31,8 +36,23 @@ function App() {
             <Route path="/cart">
               <Cart />
             </Route>
+            <Route path="/signin">
+              <Signin />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
             <Route path="/productDetail/:id">
               <ProductDetail />
+            </Route>
+            <Route path="/shippingAddress">
+              <ShippingAddress />
+            </Route>
+            <Route path="/payment">
+              <Payment />
+            </Route>
+            <Route path="/finalPage">
+              <FinalPage />
             </Route>
           </Switch>
         </main>

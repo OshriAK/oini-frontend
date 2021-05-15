@@ -1,0 +1,68 @@
+.shippingAddress-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shippingAddress-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid black;
+}
+
+.shippingAddress-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shippingAddress-form > label {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.shippingAddress-form > input {
+  padding: 10px 45px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.shippingAddress-form-button {
+  padding: 14px 50px;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--color1);
+  color: black;
+  margin: 20px;
+}
+
+.shippingAddress-form-button:hover {
+  border: 1px solid grey;
+}
+
+@media (max-width: 960px) {
+  .shippingAddress-title {
+    font-size: 28px;
+    margin: 20px 0;
+  }
+
+  .shippingAddress-form > input {
+    font-size: 14px;
+    padding: 8px 30px;
+  }
+
+  .shippingAddress-form > label {
+    font-size: 18px;
+    margin-bottom: 1px;
+  }
+
+  .shippingAddress-form-button {
+    padding: 12px 40px;
+    font-size: 1rem;
+    margin: 15px;
+  }
+}

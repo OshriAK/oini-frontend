@@ -5,7 +5,7 @@
 }
 
 .productDetail-container > img {
-  height: 280px;
+  height: 260px;
 }
 
 .productDetail-detail {
@@ -14,13 +14,21 @@
   justify-content: center;
   align-items: flex-start;
   background-color: #eee;
-  padding: 100px;
+  padding: 40px;
   margin-right: 100px;
 }
 
 .productDetail-detail > h1 {
   border-bottom: 1px solid grey;
   margin-bottom: 10px;
+}
+
+.productDetail-price {
+  margin-top: 10px;
+}
+
+.productDetail-price-span {
+  color: red;
 }
 
 .productDetail-button-container {
@@ -64,21 +72,21 @@
   }
 
   .productDetail-container > img {
-    height: 160px;
+    height: 140px;
   }
 
   .productDetail-detail {
     max-width: 350px;
     margin: 0px;
-    padding: 40px;
+    padding: 12px;
+    font-size: 14px;
   }
 
   .productDetail-addToCart-button {
     padding: 12px 12px;
-    margin-left: 12px;
   }
 
   .productDetail-buyNow-button {
-    padding: 12px 30px;
+    padding: 12px 34px;
   }
 }

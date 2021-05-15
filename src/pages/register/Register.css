@@ -1,0 +1,78 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.register-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid black;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-form > label {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.register-form > input {
+  padding: 11px 45px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.register-form-button {
+  padding: 14px 50px;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--color1);
+  color: black;
+  margin: 20px;
+}
+
+.register-form-button:hover {
+  border: 1px solid grey;
+}
+
+.register-stillNot {
+  font-size: 20px;
+}
+
+.register-stillNot > a {
+  text-decoration: none;
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+
+@media (max-width: 960px) {
+  .register-title {
+    font-size: 28px;
+    margin: 20px 0;
+  }
+
+  .register-form > input {
+    font-size: 14px;
+    padding: 8px 30px;
+  }
+
+  .register-form > label {
+    font-size: 18px;
+    margin-bottom: 1px;
+  }
+
+  .register-form-button {
+    padding: 12px 40px;
+    font-size: 1rem;
+    margin: 15px;
+  }
+}

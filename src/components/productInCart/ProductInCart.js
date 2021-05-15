@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { addToCart, removeFromCart } from '../../redux/actions/cartActions';
 
 import './ProductInCart.css';
@@ -14,7 +15,7 @@ const ProductInCart = ({ img, name, price, countInStock, qty, id }) => {
   return (
     <div className="productInCart-container">
       <img src={img} alt={name} />
-      <div>{name}</div>
+      <Link to={`/productDetail/${id}`}>{name}</Link>
       <h3>כמות:</h3>
       <div>
         <select

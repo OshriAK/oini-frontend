@@ -1,0 +1,115 @@
+.finalPage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 81vh;
+}
+
+.finalPage-row1 {
+  display: flex;
+  justify-content: center;
+}
+
+.finalPage-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.finalPage-address {
+  padding: 20px 60px;
+  border-radius: 6px;
+  border: 1px solid black;
+  background-color: var(--primaryColor);
+  font-size: 18px;
+  margin-left: 50px;
+}
+
+.finalPage-address > div {
+  margin: 6px 0px;
+}
+
+.finalPage-address > div > span {
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------- */
+
+.finalPage-payment {
+  padding: 20px 60px;
+  border-radius: 6px;
+  border: 1px solid black;
+  background-color: var(--primaryColor);
+  font-size: 18px;
+}
+
+.finalPage-payment > div {
+  margin: 6px 0px;
+}
+
+.finalPage-payment > div > span {
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------- */
+
+.finalPage-orderList {
+  margin-top: 40px;
+  padding: 20px 20px;
+  border-radius: 6px;
+  border: 1px solid black;
+  background-color: var(--primaryColor);
+}
+
+.finalPage-finalApprove-button {
+  margin: 40px 0px;
+  padding: 20px 120px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: var(--color2);
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+.finalPage-finalApprove-button:hover {
+  background-color: green;
+}
+
+/* --------------------------------------------------------------------------- */
+
+@media (max-width: 960px) {
+  .finalPage-container {
+    min-height: 75vh;
+  }
+
+  .finalPage-row1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .finalPage-address {
+    padding: 20px 60px;
+    font-size: 18px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+
+  .finalPage-orderList {
+    margin-top: 20px;
+    padding: 5px 0px;
+  }
+
+  .finalPage-finalApprove-button {
+    margin: 20px 0px;
+    padding: 16px 76px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: var(--color2);
+    border: 1px solid black;
+    border-radius: 6px;
+  }
+}

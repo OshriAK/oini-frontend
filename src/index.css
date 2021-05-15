@@ -5,6 +5,8 @@
 }
 
 :root {
+  --primaryColor: #eee;
   --color1: #e6e600;
-  --color2: #40ff00;
+  --color2: rgb(28, 155, 28);
+  --color3: #ff9900;
 }

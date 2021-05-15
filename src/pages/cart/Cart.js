@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import MessageBox from '../../components/messageBox/MessageBox';
 
 import ProductInCart from '../../components/productInCart/ProductInCart';
@@ -10,8 +10,14 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
+  const history = useHistory();
+
   let totalPrice = 0;
   cartItems.forEach((prod) => (totalPrice += parseInt(prod.price) * prod.qty));
+
+  const continueOrderHandler = () => {
+    history.push('/signin?redirect=shippingAddress');
+  };
 
   return (
     <>
@@ -52,9 +58,7 @@ const Cart = () => {
             <button
               className="cart-continue-order-button"
               disabled={cartItems.length === 0}
-              onClick={() => {
-                console.log('click');
-              }}
+              onClick={continueOrderHandler}
             >
               המשך הזמנה
             </button>

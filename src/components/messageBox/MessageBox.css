@@ -1,8 +1,9 @@
 .messageBox-alert {
-  padding: 1.5rem;
+  padding: 1.2rem;
   border: 1px solid transparent;
   border-radius: 6px;
   font-size: 20px;
+  margin: 10px 0;
 }
 
 .messageBox-alert-info {
@@ -18,4 +19,12 @@
 .messageBox-alert-success {
   color: #20a020;
   background-color: #ffe0e0;
+}
+
+@media (max-width: 960px) {
+  .messageBox-alert {
+    padding: 12px;
+    font-size: 18px;
+    margin: 10px 0;
+  }
 }
