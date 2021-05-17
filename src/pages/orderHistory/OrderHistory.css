@@ -1,0 +1,72 @@
+.orderHistory-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.orderHistory-title {
+  margin: 30px 0px;
+  font-size: 32px;
+  border-bottom: 2px solid black;
+}
+
+.orderHistory-table {
+  border-collapse: collapse;
+}
+
+.orderHistory-table tbody tr:nth-of-type(odd) {
+  background-color: #eee;
+}
+
+.orderHistory-table td,
+.orderHistory-table th {
+  text-align: right;
+  border: 2px solid #e4e4e4;
+  padding: 15px 30px;
+}
+
+.orderHistory-detail-button {
+  margin: 0px 2px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.orderHistory-detail-button:hover {
+  background-color: white;
+}
+
+@media (max-width: 960px) {
+  .orderHistory-container {
+    font-size: 18px;
+  }
+
+  .orderHistory-title {
+    margin: 30px 0px;
+    font-size: 24px;
+  }
+
+  .orderHistory-table td,
+  .orderHistory-table th {
+    text-align: right;
+    border: 2px solid #e4e4e4;
+    padding: 8px 5px;
+  }
+
+  .orderHistory-table td:first-child,
+  .orderHistory-table th:first-child {
+    display: none;
+  }
+
+  .orderHistory-detail-button {
+    margin: 0px 2px;
+    padding: 4px 8px;
+  }
+
+  .orderHistory-detail-button:hover {
+    background-color: white;
+  }
+}

@@ -18,7 +18,7 @@
   text-decoration: none;
   color: black;
   background-color: var(--primaryColor);
-  padding: 14px 24px;
+  padding: 12px 20px;
   font-size: 18px;
   border-radius: 6px;
   border: 1px solid black;
@@ -51,7 +51,7 @@
   align-items: center;
   height: 220px;
   width: 350px;
-  border: 2px solid black;
+  border: 1px solid black;
   background-color: var(--primaryColor);
   border-radius: 6px;
   font-size: 20px;
@@ -70,7 +70,7 @@
   padding: 7px 80px;
   border: 1px solid grey;
   border-radius: 6px;
-  font-size: 1.4rem;
+  font-size: 20px;
   cursor: pointer;
   background-color: var(--color1);
 }
@@ -104,7 +104,7 @@
 
   .cart-container-subtotal {
     height: 200px;
-    width: 310px;
+    width: 300px;
     font-size: 16px;
   }
 
@@ -113,7 +113,7 @@
   }
 
   .cart-continue-order-button {
-    padding: 7px 60px;
-    font-size: 1.2rem;
+    padding: 7px 50px;
+    font-size: 18px;
   }
 }

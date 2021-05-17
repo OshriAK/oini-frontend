@@ -16,6 +16,9 @@ import ProductDetail from './pages/productDetail/ProductDetail';
 import ShippingAddress from './pages/shippingAddress/ShippingAddress';
 import Payment from './pages/payment/Payment';
 import FinalPage from './pages/finalPage/FinalPage';
+import OrderDetail from './pages/orderDetail/OrderDetail';
+import OrderHistory from './pages/orderHistory/OrderHistory';
+import Profile from './pages/profile/Profile';
 
 import './App.css';
 
@@ -53,6 +56,15 @@ function App() {
             </Route>
             <Route path="/finalPage">
               <FinalPage />
+            </Route>
+            <Route path="/order/:id">
+              <OrderDetail />
+            </Route>
+            <Route path="/orderhistory">
+              <OrderHistory />
+            </Route>
+            <Route path="/profile">
+              <Profile />
             </Route>
           </Switch>
         </main>

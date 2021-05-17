@@ -37,9 +37,17 @@ const Navbar = ({ click }) => {
                 </div>
               </NavLink>
               <ul className="dropdown-content">
-                <NavLink to="#sigout" onClick={signoutHandler}>
-                  התנתק
-                </NavLink>
+                <li>
+                  <NavLink to="/profile">עדכן פרופיל</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/orderhistory">הזמנות קודמות</NavLink>
+                </li>
+                <li>
+                  <NavLink to="#sigout" onClick={signoutHandler}>
+                    התנתק
+                  </NavLink>
+                </li>
               </ul>
             </div>
           ) : (

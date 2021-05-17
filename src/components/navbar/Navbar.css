@@ -53,7 +53,7 @@
   position: absolute;
   display: none;
   right: 0;
-  min-width: 12rem;
+  min-width: 10rem;
   padding: 1rem;
   z-index: 1;
   background-color: var(--primaryColor);
@@ -64,13 +64,18 @@
   text-align: center;
 }
 
-.dropdown-content > a {
+.dropdown-content > li {
+  margin: 9px 0px;
+  list-style-type: none;
+}
+
+.dropdown-content > li > a {
   color: black;
   text-decoration: none;
   font-size: 22px;
 }
 
-.dropdown-content > a:hover {
+.dropdown-content > li > a:hover {
   color: var(--color3);
 }
 
@@ -79,9 +84,9 @@
 }
 
 .signin-name {
-  font-size: 28px;
+  font-size: 26px;
   color: black;
-  padding: 2px 8px;
+  padding: 3px 8px;
   border: 2px solid black;
   border-radius: 6px;
 }
@@ -143,9 +148,9 @@
   }
 
   .signin-name {
-    font-size: 25px;
+    font-size: 24px;
     color: black;
-    padding: 2px 6px;
+    padding: 3px 6px;
   }
 
   .navbar-single-link > span {
@@ -154,7 +159,7 @@
     width: 28px;
   }
 
-  .dropdown-content > a {
+  .dropdown-content > li > a {
     color: black;
     text-decoration: none;
     font-size: 20px;
