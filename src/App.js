@@ -19,6 +19,7 @@ import FinalPage from './pages/finalPage/FinalPage';
 import OrderDetail from './pages/orderDetail/OrderDetail';
 import OrderHistory from './pages/orderHistory/OrderHistory';
 import Profile from './pages/profile/Profile';
+import Taknon from './pages/takanon/Taknon';
 
 import './App.css';
 
@@ -65,6 +66,9 @@ function App() {
             </Route>
             <Route path="/profile">
               <Profile />
+            </Route>
+            <Route path="/takanon">
+              <Taknon />
             </Route>
           </Switch>
         </main>
