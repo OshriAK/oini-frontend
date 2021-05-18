@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* min-height: 80px; */
   background-color: var(--primaryColor);
   box-shadow: 0px -2px 1px grey;
   margin-top: 20px;
@@ -14,8 +13,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin: 20px;
-  /* background-color: greenyellow; */
+  margin: 10px;
 }
 
 .footer-contact-us-container {
@@ -23,7 +21,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin-left: 100px; */
 }
 
 .contact-us-title {
@@ -52,9 +49,9 @@
 
 .footer-reserve {
   border-top: 1px solid black;
-  padding: 14px;
-  margin: 14px;
-  font-size: 18px;
-  width: 60vw;
+  padding: 14px 0px;
+  margin: 14px 0px;
+  font-size: 17px;
+  width: 70vw;
   text-align: center;
 }
