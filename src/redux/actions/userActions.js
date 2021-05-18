@@ -16,6 +16,7 @@ import {
 } from '../constants/userConstants';
 
 const url = process.env.BACKEND_API;
+console.log('url', url);
 
 export const signin = (email, password) => async (dispatch) => {
   dispatch({ type: USER_SIGNIN_REQUEST, payload: { email, password } });
