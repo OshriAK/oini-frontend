@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 20px 0px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .checkoutSteps-container > div {
@@ -21,8 +22,8 @@
 @media (max-width: 960px) {
   .checkoutSteps-container > div {
     border-top: 3px solid grey;
-    font-size: 16px;
+    font-size: 15px;
     color: grey;
-    padding: 8px 12px;
+    padding: 8px 10px;
   }
 }
