@@ -15,10 +15,15 @@ import {
   USER_UPDATE_PROFILE_SUCCESS,
 } from '../constants/userConstants';
 
+const url = process.env.BACKEND_API;
+
 export const signin = (email, password) => async (dispatch) => {
   dispatch({ type: USER_SIGNIN_REQUEST, payload: { email, password } });
   try {
-    const { data } = await Axios.post('/api/users/signin', { email, password });
+    const { data } = await Axios.post(url + '/api/users/signin', {
+      email,
+      password,
+    });
     dispatch({ type: USER_SIGNIN_SUCCESS, payload: data });
     localStorage.setItem('userInfo', JSON.stringify(data));
   } catch (error) {
@@ -35,7 +40,7 @@ export const signin = (email, password) => async (dispatch) => {
 export const register = (name, email, password) => async (dispatch) => {
   dispatch({ type: USER_REGISTER_REQUEST, payload: { email, password } });
   try {
-    const { data } = await Axios.post('/api/users/register', {
+    const { data } = await Axios.post(url + '/api/users/register', {
       name,
       email,
       password,
@@ -67,7 +72,7 @@ export const detailsUser = (userId) => async (dispatch, getState) => {
   const { userSignin } = getState();
   const { userInfo } = userSignin;
   try {
-    const { data } = await Axios.get(`/api/users/${userId}`, {
+    const { data } = await Axios.get(url + `/api/users/${userId}`, {
       headers: { Authorization: `Bearer ${userInfo}` },
     });
     dispatch({ type: USER_DETAILS_SUCCESS, payload: data });
@@ -86,7 +91,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
   const { userInfo } = userSignin;
 
   try {
-    const { data } = await Axios.put(`/api/users/profile`, user, {
+    const { data } = await Axios.put(url + `/api/users/profile`, user, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: USER_UPDATE_PROFILE_SUCCESS, payload: data });

@@ -12,12 +12,14 @@ import {
   ORDER_MINE_LIST_SUCCESS,
 } from '../constants/orderConstants';
 
+const url = process.env.BACKEND_API;
+
 export const createOrder = (order) => async (dispatch, getState) => {
   dispatch({ type: ORDER_CREATE_REQUEST });
   try {
     const { userSignin } = getState();
     const { userInfo } = userSignin;
-    const { data } = await Axios.post('/api/orders', order, {
+    const { data } = await Axios.post(url + '/api/orders', order, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: ORDER_CREATE_SUCCESS, payload: data.order });
@@ -39,7 +41,7 @@ export const detailsOrder = (orderId) => async (dispatch, getState) => {
   const { userSignin } = getState();
   const { userInfo } = userSignin;
   try {
-    const { data } = await Axios.get(`/api/orders/${orderId}`, {
+    const { data } = await Axios.get(url + `/api/orders/${orderId}`, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: ORDER_DETAILS_SUCCESS, payload: data });
@@ -57,7 +59,7 @@ export const listOrderMine = () => async (dispatch, getState) => {
   const { userSignin } = getState();
   const { userInfo } = userSignin;
   try {
-    const { data } = await Axios.get('/api/orders/mine', {
+    const { data } = await Axios.get(url + '/api/orders/mine', {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: ORDER_MINE_LIST_SUCCESS, payload: data });
