@@ -21,8 +21,6 @@ const OrderDetail = () => {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
 
-  console.log('order', order);
-
   useEffect(() => {
     dispatch(detailsOrder(id));
   }, [dispatch, id]);
