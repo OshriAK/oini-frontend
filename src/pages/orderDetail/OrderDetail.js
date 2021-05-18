@@ -21,6 +21,8 @@ const OrderDetail = () => {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
 
+  console.log('order', order);
+
   useEffect(() => {
     dispatch(detailsOrder(id));
   }, [dispatch, id]);
@@ -51,7 +53,7 @@ const OrderDetail = () => {
           </div>
           <div>
             <span>כתובת: </span>
-            {order.shippingAddress.shippingAddressaddress}
+            {order.shippingAddress.address}
           </div>
           <div>
             <span>ארץ: </span>

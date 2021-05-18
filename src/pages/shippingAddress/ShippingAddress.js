@@ -41,8 +41,6 @@ const ShippingAddress = () => {
     <div className="shippingAddress-container">
       <CheckoutSteps step1 step2 />
       <div className="shippingAddress-title">פרטי משלוח</div>
-      {/* {loading && <LoadingBox />}
-      {error && <MessageBox variant="danger">{error}</MessageBox>} */}
       <form className="shippingAddress-form" onSubmit={submitHandler}>
         <label htmlFor="name"> שם מלא:</label>
         <input
