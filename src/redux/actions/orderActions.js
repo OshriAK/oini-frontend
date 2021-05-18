@@ -12,7 +12,7 @@ import {
   ORDER_MINE_LIST_SUCCESS,
 } from '../constants/orderConstants';
 
-const url = process.env.BACKEND_API;
+const url = 'https://oini-backend.herokuapp.com';
 
 export const createOrder = (order) => async (dispatch, getState) => {
   dispatch({ type: ORDER_CREATE_REQUEST });

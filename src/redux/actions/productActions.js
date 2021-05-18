@@ -8,7 +8,7 @@ import {
   PRODUCT_LIST_SUCCESS,
 } from '../constants/productConstants';
 
-const url = process.env.BACKEND_API;
+const url = 'https://oini-backend.herokuapp.com';
 
 export const listProducts = () => async (dispatch) => {
   dispatch({

@@ -15,8 +15,7 @@ import {
   USER_UPDATE_PROFILE_SUCCESS,
 } from '../constants/userConstants';
 
-const url = process.env.BACKEND_API;
-console.log('url', url);
+const url = 'https://oini-backend.herokuapp.com';
 
 export const signin = (email, password) => async (dispatch) => {
   dispatch({ type: USER_SIGNIN_REQUEST, payload: { email, password } });
