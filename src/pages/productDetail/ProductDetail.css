@@ -97,6 +97,11 @@
     margin-bottom: 20px;
   }
 
+  .productDetail-image-container > h3 {
+    margin: 1px 0px;
+    font-size: 18px;
+  }
+
   .productDetail-image-container > img {
     height: 140px;
     margin: 14px 0px;
