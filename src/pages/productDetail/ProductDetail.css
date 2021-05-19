@@ -8,6 +8,10 @@
   height: 260px;
 }
 
+.productDetail-model {
+  margin-bottom: 10px;
+}
+
 .productDetail-detail {
   display: flex;
   flex-direction: column;
@@ -73,6 +77,7 @@
 
   .productDetail-container > img {
     height: 140px;
+    margin: 12px 0px;
   }
 
   .productDetail-detail {
