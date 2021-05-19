@@ -8,6 +8,15 @@
   height: 260px;
 }
 
+.productDetail-name {
+  border-bottom: 1px solid grey;
+  margin-bottom: 20px;
+}
+
+.productDetail-detail > h2 {
+  margin: 5px 0px;
+}
+
 .productDetail-model {
   margin-bottom: 10px;
 }
@@ -20,11 +29,7 @@
   background-color: #eee;
   padding: 40px;
   margin-right: 100px;
-}
-
-.productDetail-detail > h1 {
-  border-bottom: 1px solid grey;
-  margin-bottom: 10px;
+  font-size: 15px;
 }
 
 .productDetail-price {
@@ -83,8 +88,8 @@
   .productDetail-detail {
     max-width: 350px;
     margin: 0px;
-    padding: 12px;
-    font-size: 14px;
+    padding: 12px 20px;
+    font-size: 12px;
   }
 
   .productDetail-addToCart-button {

@@ -37,14 +37,14 @@ const ProductDetail = () => {
         <div className="productDetail-container">
           <img src={`../${product.image}`} alt={product.name} />
           <div className="productDetail-detail">
-            <h1>{product.name}</h1>
+            <h1 className="productDetail-name">{product.name}</h1>
             <h2 className="productDetail-model">
               דגם: {product.model}-{product.makat}
             </h2>
             <h2>מעבד: {product.detail.CPUmodel}</h2>
             <h2>כונן קשיח: {product.detail.hardDiskSize}GB</h2>
             <h2>זכרון מחשב: {product.detail.computerMemorySize}GB</h2>
-            <h2>גודל מסך: "{product.detail.screen}"</h2>
+            <h2>מסך: "{product.detail.screen}"</h2>
             <h2>מערכת הפעלה: {product.detail.operatingSystem}</h2>
             <h2 className="productDetail-price">
               מחיר:

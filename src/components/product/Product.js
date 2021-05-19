@@ -21,7 +21,7 @@ const Product = ({ id, name, model, img, price, isNewComputer, makat }) => {
 
   return (
     <div className="product-container">
-      <img src={img} alt={name} height="130px" />
+      <img src={img} alt={name} />
       <h3>{name}</h3>
       <h4>
         דגם: {model}-{makat}
