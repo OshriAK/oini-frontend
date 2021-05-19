@@ -37,6 +37,7 @@ const ProductDetail = () => {
         <div className="productDetail-container">
           <img src={`../${product.image}`} alt={product.name} />
           <div className="productDetail-detail">
+            <h4>מק"ט:{product.makat}</h4>
             <h1>{product.name}</h1>
             <h2>דגם:{product.model}</h2>
             <h2>מעבד: {product.detail.CPUmodel}</h2>
@@ -48,6 +49,7 @@ const ProductDetail = () => {
               מחיר:
               <span className="productDetail-price-span">₪{product.price}</span>
             </h2>
+            {product.isNew && <h2> מחשב מחודש</h2>}
             <div className="productDetail-button-container">
               <button
                 className="productDetail-addToCart-button"

@@ -15,7 +15,9 @@ const ProductList = ({ products }) => {
             model={prod.model}
             img={prod.image}
             price={prod.price}
+            isNew={prod.isNew}
             detail={prod.detail}
+            makat={prod.makat}
           />
         );
       })}
