@@ -27,8 +27,12 @@ const Product = ({ id, name, model, img, price, isNewComputer, makat }) => {
         דגם: {model}-{makat}
       </h4>
 
-      <div className="product-container-price">₪{price}</div>
-      {isNewComputer && <h3>מחשב מחודש</h3>}
+      <div className="product-container-price">
+        <div>₪{price}</div>
+        {isNewComputer === 'no' && (
+          <div className="product-mehudash">**מחשב מחודש**</div>
+        )}
+      </div>
       <div className="product-container-buttons-container">
         <NavLink
           to={`/productDetail/${id}`}

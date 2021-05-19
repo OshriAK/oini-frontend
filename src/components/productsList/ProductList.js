@@ -15,7 +15,7 @@ const ProductList = ({ products }) => {
             model={prod.model}
             img={prod.image}
             price={prod.price}
-            isNewComputer={prod.isNew}
+            isNewComputer={prod.isNewComputer}
             detail={prod.detail}
             makat={prod.makat}
           />
