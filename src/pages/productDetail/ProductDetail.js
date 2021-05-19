@@ -35,7 +35,12 @@ const ProductDetail = () => {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div className="productDetail-container">
-          <img src={`../${product.image}`} alt={product.name} />
+          <div className="productDetail-image-container">
+            <img src={`../${product.image}`} alt={product.name} />
+            <h3>משלוח: חינם</h3>
+            <h3>זמן אספקה: עד 3 ימי עסקים</h3>
+            <h3>אחריות: שנה - דרך חברת מרקטינג 079-9365996</h3>
+          </div>
           <div className="productDetail-detail">
             <h1 className="productDetail-name">{product.name}</h1>
             <h2 className="productDetail-model">

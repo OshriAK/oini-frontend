@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="detail-container">
         <div className="footer-contact-us-container">
           <div className="contact-us-title">צור קשר</div>
-          <div className="contact-phoneNumber">מספר לווצאפ: 050-77777777</div>
+          <div className="contact-phoneNumber">מספר לווצאפ: 053-3555309</div>
           <div className="contact-email">אימייל: oini@gmail.com</div>
         </div>
       </div>

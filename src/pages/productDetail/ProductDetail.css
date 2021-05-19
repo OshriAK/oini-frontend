@@ -4,8 +4,21 @@
   align-items: center;
 }
 
-.productDetail-container > img {
+.productDetail-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+}
+
+.productDetail-image-container > img {
   height: 260px;
+  margin-bottom: 20px;
+}
+
+.productDetail-image-container > h3 {
+  margin: 4px 0px;
 }
 
 .productDetail-name {
