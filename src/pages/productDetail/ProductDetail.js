@@ -44,7 +44,7 @@ const ProductDetail = () => {
             <h2>מעבד: {product.detail.CPUmodel}</h2>
             <h2>כונן קשיח: {product.detail.hardDiskSize}GB</h2>
             <h2>זכרון מחשב: {product.detail.computerMemorySize}GB</h2>
-            <h2>גודל מסך: "{product.detail.screenSize}"</h2>
+            <h2>גודל מסך: "{product.detail.screen}"</h2>
             <h2>מערכת הפעלה: {product.detail.operatingSystem}</h2>
             <h2 className="productDetail-price">
               מחיר:
