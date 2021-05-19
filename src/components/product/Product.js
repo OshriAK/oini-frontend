@@ -6,7 +6,7 @@ import { addToCart } from '../../redux/actions/cartActions';
 
 import './Product.css';
 
-const Product = ({ id, name, model, img, price, isNew, makat }) => {
+const Product = ({ id, name, model, img, price, isNewComputer, makat }) => {
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -28,7 +28,7 @@ const Product = ({ id, name, model, img, price, isNew, makat }) => {
       </h4>
 
       <div className="product-container-price">₪{price}</div>
-      {isNew && <h3>מחשב מחודש</h3>}
+      {isNewComputer && <h3>מחשב מחודש</h3>}
       <div className="product-container-buttons-container">
         <NavLink
           to={`/productDetail/${id}`}
