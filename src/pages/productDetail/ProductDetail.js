@@ -43,6 +43,9 @@ const ProductDetail = () => {
             <h3>דרך חברת מרקטינג - 079-9365996</h3>
           </div>
           <div className="productDetail-detail">
+            {product.isNewComputer === 'no' && (
+              <h3 className="productDetail-mehudash">**מחשב מחודש**</h3>
+            )}
             <h1 className="productDetail-name">{product.name}</h1>
             <h2 className="productDetail-model">
               דגם: {product.model}-{product.makat}
@@ -56,7 +59,9 @@ const ProductDetail = () => {
               מחיר:
               <span className="productDetail-price-span">₪{product.price}</span>
             </h2>
-            {product.isNew && <h2> מחשב מחודש</h2>}
+            {product.isNewComputer === 'no' && (
+              <h3 className="productDetail-mehudash">**מחשב מחודש**</h3>
+            )}
             <div className="productDetail-button-container">
               <button
                 className="productDetail-addToCart-button"
