@@ -39,7 +39,8 @@ const ProductDetail = () => {
             <img src={`../${product.image}`} alt={product.name} />
             <h3>משלוח: חינם</h3>
             <h3>זמן אספקה: עד 3 ימי עסקים</h3>
-            <h3>אחריות: שנה - דרך חברת מרקטינג 079-9365996</h3>
+            <h3>אחריות: שנה</h3>
+            <h3>דרך חברת מרקטינג - 079-9365996</h3>
           </div>
           <div className="productDetail-detail">
             <h1 className="productDetail-name">{product.name}</h1>
