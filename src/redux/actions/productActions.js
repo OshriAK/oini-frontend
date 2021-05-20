@@ -45,6 +45,7 @@ export const detailsProduct = (productId) => async (dispatch) => {
 };
 
 export const addProduct = (product) => async (dispatch) => {
+  console.log(product);
   dispatch({
     type: PRODUCT_ADD_REQUEST,
   });
@@ -54,6 +55,7 @@ export const addProduct = (product) => async (dispatch) => {
       url + `/api/products/addproduct`,
       product
     );
+    console.log('addproduct action', data);
     dispatch({ type: PRODUCT_ADD_SUCCESS, payload: data });
   } catch (error) {
     dispatch({

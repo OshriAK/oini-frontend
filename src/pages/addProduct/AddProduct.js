@@ -38,8 +38,23 @@ const AddProduct = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    console.log('click before dispatch');
-    await dispatch(addProduct());
+    await dispatch(
+      addProduct({
+        name,
+        brand,
+        model,
+        makat,
+        category,
+        price,
+        countInStock,
+        isNewComputer,
+        CPUmodel,
+        hardDiskSize,
+        computerMemorySize,
+        screen,
+        operatingSystem,
+      })
+    );
     console.log('click after dispatch');
   };
 
