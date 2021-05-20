@@ -14,10 +14,10 @@ const AddProduct = () => {
   const [brand, setBrand] = useState('');
   const [model, setModel] = useState('');
   const [makat, setMakat] = useState('');
-  // const [image, setImage] = useState('');
+  const [image, setImage] = useState('');
   const [category, setCategory] = useState('');
-  const [price, setPrice] = useState('');
-  const [countInStock, setCountInStock] = useState('');
+  const [price, setPrice] = useState(1);
+  const [countInStock, setCountInStock] = useState(1);
   const [isNewComputer, setIsNewComputer] = useState('');
   const [CPUmodel, setCPUmodel] = useState('');
   const [hardDiskSize, setHardDiskSize] = useState('');
@@ -44,6 +44,7 @@ const AddProduct = () => {
         brand,
         model,
         makat,
+        image,
         category,
         price,
         countInStock,
@@ -55,7 +56,6 @@ const AddProduct = () => {
         operatingSystem,
       })
     );
-    console.log('click after dispatch');
   };
 
   return (
@@ -105,7 +105,7 @@ const AddProduct = () => {
             <label htmlFor="name"> :makat</label>
           </div>
 
-          {/* <div>
+          <div>
             <input
               id="image"
               type="file"
@@ -113,7 +113,7 @@ const AddProduct = () => {
               onChange={(e) => setImage(e.target.value)}
             />
             <label htmlFor="image"> :image</label>
-          </div> */}
+          </div>
 
           <div>
             <input
@@ -129,6 +129,7 @@ const AddProduct = () => {
             <input
               id="price"
               type="number"
+              min="0"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
             />
@@ -139,6 +140,7 @@ const AddProduct = () => {
             <input
               id="countInStock"
               type="number"
+              min="0"
               value={countInStock}
               onChange={(e) => setCountInStock(e.target.value)}
             />

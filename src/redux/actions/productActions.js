@@ -44,17 +44,12 @@ export const detailsProduct = (productId) => async (dispatch) => {
   }
 };
 
-export const addProduct = (product) => async (dispatch) => {
-  console.log(product);
+export const addProduct = (newProduct) => async (dispatch) => {
   dispatch({
     type: PRODUCT_ADD_REQUEST,
   });
-
   try {
-    const { data } = await Axios.post(
-      url + `/api/products/addproduct`,
-      product
-    );
+    const { data } = await Axios.post('/api/products/addproduct', newProduct);
     console.log('addproduct action', data);
     dispatch({ type: PRODUCT_ADD_SUCCESS, payload: data });
   } catch (error) {
