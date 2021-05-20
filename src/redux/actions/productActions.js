@@ -49,7 +49,10 @@ export const addProduct = (newProduct) => async (dispatch) => {
     type: PRODUCT_ADD_REQUEST,
   });
   try {
-    const { data } = await Axios.post('/api/products/addproduct', newProduct);
+    const { data } = await Axios.post(
+      url + '/api/products/addproduct',
+      newProduct
+    );
     console.log('addproduct action', data);
     dispatch({ type: PRODUCT_ADD_SUCCESS, payload: data });
   } catch (error) {
