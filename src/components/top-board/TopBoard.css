@@ -5,8 +5,8 @@
   flex-direction: column;
   background-color: var(--primaryColor);
   border-radius: 6px;
-  height: 240px;
-  width: 85%;
+  height: 220px;
+  width: 80%;
   margin: 15px 0px;
   box-shadow: 4px 4px 3px grey;
 }

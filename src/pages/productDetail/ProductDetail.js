@@ -56,8 +56,10 @@ const ProductDetail = () => {
             <h2>מסך: "{product.detail.screen}"</h2>
             <h2>מערכת הפעלה: {product.detail.operatingSystem}</h2>
             <h2 className="productDetail-price">
-              מחיר:
-              <span className="productDetail-price-span">₪{product.price}</span>
+              מחיר:{' '}
+              <span className="productDetail-price-span">
+                ₪{product.price}{' '}
+              </span>
             </h2>
             {product.isNewComputer === 'no' && (
               <h3 className="productDetail-mehudash">**מחשב מחודש**</h3>

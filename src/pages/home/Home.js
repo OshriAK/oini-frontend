@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../../redux/actions/productActions';
 
@@ -7,6 +7,7 @@ import ProductList from '../../components/productsList/ProductList';
 import TopBoard from '../../components/top-board/TopBoard';
 import LoadingBox from '../../components/loadingBox/LoadingBox';
 import MessageBox from '../../components/messageBox/MessageBox';
+import Search from '../../components/search/Search';
 
 import './Home.css';
 
@@ -14,14 +15,20 @@ const Home = () => {
   const productList = useSelector((state) => state.productList);
   const dispatch = useDispatch();
   const { loading, error, products } = productList;
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
     dispatch(listProducts());
   }, [dispatch]);
 
+  useEffect(() => {
+    setFilteredProducts(products);
+  }, [products]);
+
   return (
     <div className="home-container">
       <TopBoard />
+      <Search products={products} setProducts={setFilteredProducts} />
       <h2 data-text="Welcome" className="home-container-title">
         מחשבים ניידים
       </h2>
@@ -29,8 +36,10 @@ const Home = () => {
         <LoadingBox></LoadingBox>
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
+      ) : filteredProducts ? (
+        <ProductList products={filteredProducts} />
       ) : (
-        <ProductList products={products} />
+        ''
       )}
     </div>
   );

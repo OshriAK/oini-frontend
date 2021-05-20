@@ -2,7 +2,6 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { signout } from '../../redux/actions/userActions';
-import Search from '../search/Search';
 
 import './Navbar.css';
 
@@ -23,9 +22,6 @@ const Navbar = ({ click }) => {
       <NavLink to="/" className="navbar__logo">
         <h2>OiNi</h2>
       </NavLink>
-
-      {/* search */}
-      <Search />
 
       {/* links */}
       <ul className="navbar__links">

@@ -2,6 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #eee;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid black;
 }
 
 .search-container-input {
@@ -12,7 +16,7 @@
   text-align: center;
   padding: 6px;
   width: 150px;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .search-container-input:focus {
@@ -24,13 +28,14 @@
 }
 
 @media (max-width: 960px) {
-  .search-container {
-    display: none;
+  .search-container-input {
+    margin-right: 15px;
+    padding: 4px;
+    width: 130px;
+    font-size: 16px;
   }
-}
 
-@media (max-width: 500px) {
-  .search-container {
-    display: none;
+  .fa-search {
+    font-size: 1.4rem;
   }
 }
