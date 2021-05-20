@@ -19,6 +19,7 @@ const AddProduct = () => {
   const [price, setPrice] = useState(1);
   const [countInStock, setCountInStock] = useState(1);
   const [isNewComputer, setIsNewComputer] = useState('');
+  const [officialImporter, setOfficialImporter] = useState('');
   const [CPUmodel, setCPUmodel] = useState('');
   const [hardDiskSize, setHardDiskSize] = useState('');
   const [computerMemorySize, setComputerMemorySize] = useState('');
@@ -49,6 +50,7 @@ const AddProduct = () => {
         price,
         countInStock,
         isNewComputer,
+        officialImporter,
         CPUmodel,
         hardDiskSize,
         computerMemorySize,
@@ -155,6 +157,16 @@ const AddProduct = () => {
               onChange={(e) => setIsNewComputer(e.target.value)}
             />
             <label htmlFor="isNewComputer"> :isNewComputer</label>
+          </div>
+
+          <div>
+            <input
+              id="officialImporter"
+              type="text"
+              value={officialImporter}
+              onChange={(e) => setOfficialImporter(e.target.value)}
+            />
+            <label htmlFor="officialImporter"> :officialImporter</label>
           </div>
 
           <div>

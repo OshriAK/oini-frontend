@@ -21,6 +21,12 @@
   margin: 4px 0px;
 }
 
+.productDetail-officialImporter {
+  color: gray;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
 .productDetail-name {
   border-bottom: 1px solid grey;
   margin-bottom: 20px;

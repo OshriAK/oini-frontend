@@ -7,6 +7,7 @@ const TopBoard = () => {
     <div className="top_board-container">
       <h2>ברוכים הבאים לאתר אויני</h2>
       <h3>מחירים מעולים </h3>
+      <h3>משלוח חינם</h3>
       <h3>קנייה בטוחה ופשוטה</h3>
     </div>
   );

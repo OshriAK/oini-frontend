@@ -40,11 +40,24 @@ const ProductDetail = () => {
             <h3>משלוח: חינם</h3>
             <h3>זמן אספקה: עד 3 ימי עסקים</h3>
             <h3>אחריות: שנה</h3>
-            <h3>דרך חברת מרקטינג - 079-9365996</h3>
+            {product.officialImporter === 'no' ? (
+              <h3>דרך חברת מרקטינג - 079-9365996</h3>
+            ) : (
+              <h3>דרך היבואן הרשמי</h3>
+            )}
           </div>
           <div className="productDetail-detail">
             {product.isNewComputer === 'no' && (
               <h3 className="productDetail-mehudash">**מחשב מחודש**</h3>
+            )}
+            {product.officialImporter === 'no' ? (
+              <div className="productDetail-officialImporter">
+                --יבואן מקביל--
+              </div>
+            ) : (
+              <div className="productDetail-officialImporter">
+                --יבואן רשמי--
+              </div>
             )}
             <h1 className="productDetail-name">{product.name}</h1>
             <h2 className="productDetail-model">

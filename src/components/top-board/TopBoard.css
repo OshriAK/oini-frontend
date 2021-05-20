@@ -5,9 +5,10 @@
   flex-direction: column;
   background-color: var(--primaryColor);
   border-radius: 6px;
-  height: 220px;
+  height: 200px;
   width: 80%;
-  margin: 15px 0px;
+  margin-top: 15px;
+  margin-bottom: 20px;
   box-shadow: 4px 4px 3px grey;
 }
 
@@ -24,8 +25,9 @@
 
 @media (max-width: 960px) {
   .top_board-container {
-    height: 150px;
-    width: 320px;
+    height: 130px;
+    width: 300px;
+    text-align: center;
   }
 
   .top_board-container > h2 {
@@ -35,7 +37,7 @@
   }
 
   .top_board-container > h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     width: 220px;
   }
 }
