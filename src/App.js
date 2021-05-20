@@ -20,6 +20,7 @@ import OrderDetail from './pages/orderDetail/OrderDetail';
 import OrderHistory from './pages/orderHistory/OrderHistory';
 import Profile from './pages/profile/Profile';
 import Taknon from './pages/takanon/Taknon';
+import AddProduct from './pages/addProduct/AddProduct';
 
 import './App.css';
 
@@ -69,6 +70,9 @@ function App() {
             </Route>
             <Route path="/takanon">
               <Taknon />
+            </Route>
+            <Route path="/addProduct">
+              <AddProduct />
             </Route>
           </Switch>
         </main>

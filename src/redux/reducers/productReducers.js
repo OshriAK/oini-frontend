@@ -1,4 +1,7 @@
 import {
+  PRODUCT_ADD_FAIL,
+  PRODUCT_ADD_REQUEST,
+  PRODUCT_ADD_SUCCESS,
   PRODUCT_DETAIL_FAIL,
   PRODUCT_DETAIL_REQUEST,
   PRODUCT_DETAIL_SUCCESS,
@@ -32,6 +35,19 @@ export const productDetailsReducer = (state = initialState, action) => {
     case PRODUCT_DETAIL_SUCCESS:
       return { loading: false, product: action.payload };
     case PRODUCT_DETAIL_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+export const productAddReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case PRODUCT_ADD_REQUEST:
+      return { loading: true };
+    case PRODUCT_ADD_SUCCESS:
+      return { loading: false, product: action.payload };
+    case PRODUCT_ADD_FAIL:
       return { loading: false, error: action.payload };
     default:
       return state;

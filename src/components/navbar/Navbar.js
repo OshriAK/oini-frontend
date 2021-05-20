@@ -8,8 +8,9 @@ import './Navbar.css';
 
 const Navbar = ({ click }) => {
   const cart = useSelector((state) => state.cart);
-  const user = useSelector((state) => state.userSignin);
   const { cartItems } = cart;
+  const user = useSelector((state) => state.userSignin);
+  const { userInfo } = user;
   const dispatch = useDispatch();
 
   const signoutHandler = () => {
@@ -29,14 +30,19 @@ const Navbar = ({ click }) => {
       {/* links */}
       <ul className="navbar__links">
         <li>
-          {user.userInfo ? (
+          {userInfo ? (
             <div className="dropdown">
               <NavLink to="#" className="navbar-single-link">
                 <div className="signin-name">
-                  {user.userInfo.name} <i className="fa fa-caret-down"></i>
+                  {userInfo.name} <i className="fa fa-caret-down"></i>
                 </div>
               </NavLink>
               <ul className="dropdown-content">
+                {userInfo.isAdmin && (
+                  <li>
+                    <NavLink to="/addProduct">הוסף מוצר</NavLink>
+                  </li>
+                )}
                 <li>
                   <NavLink to="/profile">עדכן פרופיל</NavLink>
                 </li>
