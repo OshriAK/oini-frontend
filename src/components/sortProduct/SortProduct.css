@@ -76,13 +76,14 @@
   .sortProduct-dropdown {
     display: inline-block;
     position: relative;
-    margin-right: 10px;
-    min-width: 180px;
+    margin-right: 2px;
+    min-width: 186px;
   }
 
   .sortMethod {
     font-size: 19px;
     color: black;
+    min-width: 186px;
   }
 
   .dropdown-content {
