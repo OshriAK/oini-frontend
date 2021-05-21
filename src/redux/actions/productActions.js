@@ -53,7 +53,6 @@ export const addProduct = (newProduct) => async (dispatch) => {
       url + '/api/products/addproduct',
       newProduct
     );
-    console.log('addproduct action', data);
     dispatch({ type: PRODUCT_ADD_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
