@@ -69,7 +69,7 @@
 @media (max-width: 960px) {
   .sortProduct-container {
     padding: 20px;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 15px;
   }
 
@@ -86,13 +86,13 @@
   }
 
   .dropdown-content {
-    right: -25px;
-    min-width: 180px;
+    right: -30px;
+    min-width: 194px;
     padding: 8px 14px;
     z-index: 1;
   }
 
   .dropdown-content > li > div {
-    font-size: 19px;
+    font-size: 18px;
   }
 }
