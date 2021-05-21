@@ -57,7 +57,7 @@
   padding: 1rem;
   z-index: 1;
   background-color: var(--primaryColor);
-  margin: 0;
+  margin-right: 25px;
   /* margin-top: 0.1rem; */
   border-radius: 0.5rem;
   border: 1px black solid;
@@ -149,15 +149,15 @@
   }
 
   .signin-name {
-    font-size: 24px;
+    font-size: 22px;
     color: black;
-    padding: 3px 6px;
+    padding: 4px 5px;
   }
 
   .navbar-single-link > span {
-    right: 20px;
-    height: 28px;
-    width: 28px;
+    right: 18px;
+    height: 27px;
+    width: 27px;
   }
 
   .dropdown-content > li > a {

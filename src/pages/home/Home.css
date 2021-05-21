@@ -6,8 +6,27 @@
   width: 80vw;
 }
 
+.home-sortSeatch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .home-container-title {
   border-bottom: 4px black solid;
   margin: 18px 0px;
-  font-size: 26px;
+  font-size: 32px;
+}
+
+@media (max-width: 960px) {
+  .home-sortSeatch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-container-title {
+    font-size: 27px;
+  }
 }

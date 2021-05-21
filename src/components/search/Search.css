@@ -2,10 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #eee;
+  background-color: var(--primaryColor);
   padding: 12px;
   border-radius: 6px;
   border: 1px solid black;
+  width: 360px;
+  margin: 0px 10px;
 }
 
 .search-container-input {
@@ -15,7 +17,7 @@
   background-color: transparent;
   text-align: center;
   padding: 6px;
-  width: 150px;
+  width: 200px;
   font-size: 16px;
 }
 
@@ -28,6 +30,10 @@
 }
 
 @media (max-width: 960px) {
+  .search-container {
+    width: 280px;
+  }
+
   .search-container-input {
     margin-right: 15px;
     padding: 3px;

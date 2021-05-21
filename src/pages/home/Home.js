@@ -8,6 +8,7 @@ import TopBoard from '../../components/top-board/TopBoard';
 import LoadingBox from '../../components/loadingBox/LoadingBox';
 import MessageBox from '../../components/messageBox/MessageBox';
 import Search from '../../components/search/Search';
+import SortProduct from '../../components/sortProduct/SortProduct';
 
 import './Home.css';
 
@@ -28,7 +29,10 @@ const Home = () => {
   return (
     <div className="home-container">
       <TopBoard />
-      <Search products={products} setProducts={setFilteredProducts} />
+      <div className="home-sortSeatch">
+        <Search products={products} setProducts={setFilteredProducts} />
+        <SortProduct products={products} setProducts={setFilteredProducts} />
+      </div>
       <h2 data-text="Welcome" className="home-container-title">
         מחשבים ניידים
       </h2>
