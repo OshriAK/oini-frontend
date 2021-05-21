@@ -41,8 +41,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 320px;
-    padding: 10px;
+    min-width: 335px;
+    padding: 4px;
   }
 
   .productInCart-container > a {
@@ -50,7 +50,7 @@
   }
 
   .productInCart-container > img {
-    height: 32px;
+    height: 30px;
   }
 
   .productInCart-container > div {
@@ -58,7 +58,7 @@
   }
 
   .productInCart-container > h3 {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .productInCart-quntity-select {
@@ -67,6 +67,7 @@
   }
 
   .productInCart-delete-button {
+    display: flex;
     padding: 4px 10px;
     border-radius: 6px;
     cursor: pointer;
