@@ -47,13 +47,15 @@
   align-items: flex-start;
   background-color: #eee;
   padding: 40px;
+  margin: 30px;
   margin-right: 100px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .productDetail-mehudash {
   color: red;
   margin: 10px 0px;
+  font-size: 18px;
 }
 
 .productDetail-price {
@@ -123,7 +125,7 @@
     max-width: 350px;
     margin: 0px;
     padding: 12px 20px;
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .productDetail-addToCart-button {
