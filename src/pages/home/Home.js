@@ -17,7 +17,7 @@ const Home = () => {
   const productList = useSelector((state) => state.productList);
   const dispatch = useDispatch();
   const { loading, error, products } = productList;
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState();
 
   useEffect(() => {
     dispatch(listProducts());

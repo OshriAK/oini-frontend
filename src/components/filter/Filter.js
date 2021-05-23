@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import './Filter.css';
 
@@ -17,12 +17,54 @@ const Filter = (props) => {
   const memoryValues = useRef([]);
   const osValues = useRef([]);
 
+  const [productFilteredPrice, setProductFilteredPrice] = useState([-1]);
+  const [productFilteredScreen, setProductFilteredScreen] = useState([-1]);
+  const [productFilteredCpu, setProductFilteredCpu] = useState([-1]);
+  const [productFilteredMemory, setProductFilteredMemory] = useState([-1]);
+  const [productFilteredOs, setProductFilteredOs] = useState([-1]);
+
+  useEffect(() => {
+    if (
+      productFilteredPrice[0] === -1 &&
+      productFilteredScreen[0] === -1 &&
+      productFilteredCpu[0] === -1 &&
+      productFilteredMemory[0] === -1 &&
+      productFilteredOs[0] === -1
+    ) {
+      setProducts(products);
+    } else {
+      setProducts(
+        products.filter((prod) => {
+          return (
+            (productFilteredPrice[0] === -1 ||
+              productFilteredPrice.includes(prod)) &&
+            (productFilteredScreen[0] === -1 ||
+              productFilteredScreen.includes(prod)) &&
+            (productFilteredCpu[0] === -1 ||
+              productFilteredCpu.includes(prod)) &&
+            (productFilteredMemory[0] === -1 ||
+              productFilteredMemory.includes(prod)) &&
+            (productFilteredOs[0] === -1 || productFilteredOs.includes(prod))
+          );
+        })
+      );
+    }
+  }, [
+    productFilteredPrice,
+    productFilteredScreen,
+    productFilteredCpu,
+    productFilteredMemory,
+    productFilteredOs,
+    products,
+    setProducts,
+  ]);
+
   const handlePriceCheckBox = (value) => {
     priceValues.current = [...value.split('-')];
 
-    let tempArray = [];
+    let tempArrayPrice = [];
     if (priceValues.current.length > 0) {
-      tempArray = products.filter((prod) => {
+      tempArrayPrice = products.filter((prod) => {
         if (
           parseInt(prod.price) > priceValues.current[0] &&
           parseInt(prod.price) < priceValues.current[1]
@@ -30,7 +72,7 @@ const Filter = (props) => {
           return prod;
         } else return null;
       });
-      setProducts(tempArray);
+      setProductFilteredPrice(tempArrayPrice);
     }
   };
 
@@ -43,14 +85,14 @@ const Filter = (props) => {
       screenSizeValues.current.push(value);
     }
 
-    let tempArray = [];
+    let tempArrayScreenSize = [];
     if (screenSizeValues.current.length > 0) {
       screenSizeValues.current.forEach((val) => {
-        tempArray.push(
+        tempArrayScreenSize.push(
           ...products.filter((prod) => prod.detail.screen.includes(val))
         );
       });
-      setProducts(tempArray);
+      setProductFilteredScreen(tempArrayScreenSize);
     }
   };
 
@@ -61,14 +103,14 @@ const Filter = (props) => {
       cpuValues.current.push(value);
     }
 
-    let tempArray = [];
+    let tempArrayCpu = [];
     if (cpuValues.current.length > 0) {
       cpuValues.current.forEach((val) => {
-        tempArray.push(
+        tempArrayCpu.push(
           ...products.filter((prod) => prod.detail.CPUmodel.includes(val))
         );
       });
-      setProducts(tempArray);
+      setProductFilteredCpu(tempArrayCpu);
     }
   };
 
@@ -81,14 +123,14 @@ const Filter = (props) => {
       memoryValues.current.push(value);
     }
 
-    let tempArray = [];
+    let tempArrayMemory = [];
     if (memoryValues.current.length > 0) {
       memoryValues.current.forEach((val) => {
-        tempArray.push(
+        tempArrayMemory.push(
           ...products.filter((prod) => prod.detail.computerMemorySize === val)
         );
       });
-      setProducts(tempArray);
+      setProductFilteredMemory(tempArrayMemory);
     }
   };
 
@@ -99,16 +141,16 @@ const Filter = (props) => {
       osValues.current.push(value);
     }
 
-    let tempArray = [];
+    let tempArrayOs = [];
     if (osValues.current.length > 0) {
       osValues.current.forEach((val) => {
-        tempArray.push(
+        tempArrayOs.push(
           ...products.filter((prod) =>
             prod.detail.operatingSystem.includes(val)
           )
         );
       });
-      setProducts(tempArray);
+      setProductFilteredOs(tempArrayOs);
     }
   };
 
