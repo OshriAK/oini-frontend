@@ -30,8 +30,6 @@ const Product = ({
 
   return (
     <div className="product-container">
-      <div>{detail.CPUmodel}</div>
-      <div>{detail.screen}</div>
       <img src={img} alt={name} />
       <h3>{name}</h3>
       <h4>

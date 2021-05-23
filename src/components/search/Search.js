@@ -39,6 +39,12 @@ const Search = (props) => {
             prod.name.toLowerCase().includes(searchTerm.toLowerCase())
           ) {
             return prod;
+          } else if (
+            prod.detail.CPUmodel.toLowerCase().includes(
+              searchTerm.toLowerCase()
+            )
+          ) {
+            return prod;
           }
           return null;
         })
