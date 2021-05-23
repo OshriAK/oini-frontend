@@ -64,7 +64,7 @@ const ShippingAddress = () => {
         <input
           type="text"
           id="address"
-          placeholder="הכנס כתובת"
+          placeholder="הכנס כתובת מלאה"
           required
           value={address}
           onChange={(e) => setAddress(e.target.value)}

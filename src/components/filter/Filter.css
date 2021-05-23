@@ -1,0 +1,92 @@
+.filter-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 230px;
+  margin: 5px;
+  padding: 0px 10px;
+}
+
+.filter-container > div {
+  padding: 10px 20px;
+  background-color: white;
+  margin: 5px 0px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 16px;
+}
+
+.fa-caret-down {
+  margin-right: 15px;
+}
+
+.filter-dropdown {
+  padding: 2px;
+  user-select: none;
+}
+
+.filter-dropdown-content {
+  min-width: 168px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.display-none {
+  display: none;
+}
+
+.filter-dropdown-content > div {
+  display: flex;
+  align-items: center;
+  margin: 4px 0px;
+  padding: 6px 0px;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.filter-dropdown-content > div > input {
+  margin-left: 8px;
+  height: 17px;
+  width: 17px;
+}
+
+.filter-dropdown-content > div > label {
+  font-size: 17px;
+}
+
+/* .filter-dropdown-content > button {
+  background-color: var(--primaryColor);
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1px solid black;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  box-shadow: black 0px 3px 8px;
+}
+
+.filter-dropdown-content > button:hover {
+  box-shadow: none;
+} */
+
+@media (max-width: 960px) {
+  .filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 220px;
+    padding: 10px;
+  }
+
+  .filter-container > div {
+    padding: 8px 16px;
+    margin: 3px 0px;
+    font-size: 14px;
+  }
+}

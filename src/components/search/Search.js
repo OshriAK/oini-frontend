@@ -7,7 +7,14 @@ const Search = (props) => {
   const { products, setProducts } = props;
 
   const searchHandler = (e) => {
-    setSearchTerm(e);
+    //debounce
+    let timeoutId = setTimeout(() => {
+      setSearchTerm(e);
+    }, 500);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   };
 
   useEffect(() => {

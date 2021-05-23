@@ -6,7 +6,16 @@ import { addToCart } from '../../redux/actions/cartActions';
 
 import './Product.css';
 
-const Product = ({ id, name, model, img, price, isNewComputer, makat }) => {
+const Product = ({
+  id,
+  name,
+  model,
+  img,
+  price,
+  isNewComputer,
+  makat,
+  detail,
+}) => {
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -21,6 +30,8 @@ const Product = ({ id, name, model, img, price, isNewComputer, makat }) => {
 
   return (
     <div className="product-container">
+      <div>{detail.CPUmodel}</div>
+      <div>{detail.screen}</div>
       <img src={img} alt={name} />
       <h3>{name}</h3>
       <h4>

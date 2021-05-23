@@ -9,6 +9,7 @@ import LoadingBox from '../../components/loadingBox/LoadingBox';
 import MessageBox from '../../components/messageBox/MessageBox';
 import Search from '../../components/search/Search';
 import SortProduct from '../../components/sortProduct/SortProduct';
+import Filter from '../../components/filter/Filter';
 
 import './Home.css';
 
@@ -29,19 +30,29 @@ const Home = () => {
   return (
     <div className="home-container">
       <TopBoard />
-      <div className="home-sortSeatch">
-        <Search products={products} setProducts={setFilteredProducts} />
-        <SortProduct products={products} setProducts={setFilteredProducts} />
-      </div>
-      <h2 data-text="Welcome" className="home-container-title">
-        מחשבים ניידים
-      </h2>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : filteredProducts ? (
-        <ProductList products={filteredProducts} />
+        <>
+          <div className="home-sortSeatch">
+            <Search products={products} setProducts={setFilteredProducts} />
+            <SortProduct
+              products={products}
+              setProducts={setFilteredProducts}
+            />
+          </div>
+          <div className="home-row1">
+            <div className="home-filters">
+              <Filter products={products} setProducts={setFilteredProducts} />
+            </div>
+            <div className="home-productsList">
+              <h2 className="home-container-title">מחשבים ניידים</h2>
+              <ProductList products={filteredProducts} />
+            </div>
+          </div>
+        </>
       ) : (
         ''
       )}
