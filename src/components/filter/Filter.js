@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import './Filter.css';
 
@@ -11,67 +11,97 @@ const Filter = (props) => {
   const [isMemoryClicked, setIsMemoryClicked] = useState(false);
   const [isOsClicked, setIsOsClicked] = useState(false);
 
-  const [priceValues, setPriceValues] = useState([]);
-  const [screenSizeValues, setScreenSizeValues] = useState([]);
-  const [cpuValues, setCpuValues] = useState([]);
-  const [memoryValues, setMemoryValues] = useState([]);
-  const [osValues, setOsValues] = useState([]);
+  const priceValues = useRef([]);
+  const screenSizeValues = useRef([]);
+  const cpuValues = useRef([]);
+  const memoryValues = useRef([]);
+  const osValues = useRef([]);
 
-  useEffect(() => {
+  const handlePriceCheckBox = (value) => {
+    priceValues.current = [...value.split('-')];
+
     let tempArray = [];
-    if (priceValues.length > 0) {
+    if (priceValues.current.length > 0) {
       tempArray = products.filter((prod) => {
         if (
-          parseInt(prod.price) > priceValues[0] &&
-          parseInt(prod.price) < priceValues[1]
+          parseInt(prod.price) > priceValues.current[0] &&
+          parseInt(prod.price) < priceValues.current[1]
         ) {
           return prod;
         } else return null;
       });
       setProducts(tempArray);
     }
-  }, [products, priceValues, setProducts]);
+  };
 
-  useEffect(() => {
+  const handleScreenSizeCheckBox = (value) => {
+    if (screenSizeValues.current.includes(value)) {
+      screenSizeValues.current = screenSizeValues.current.filter(
+        (val) => val !== value
+      );
+    } else {
+      screenSizeValues.current.push(value);
+    }
+
     let tempArray = [];
-    if (screenSizeValues.length > 0) {
-      screenSizeValues.forEach((val) => {
+    if (screenSizeValues.current.length > 0) {
+      screenSizeValues.current.forEach((val) => {
         tempArray.push(
           ...products.filter((prod) => prod.detail.screen.includes(val))
         );
       });
       setProducts(tempArray);
     }
-  }, [products, screenSizeValues, setProducts]);
+  };
 
-  useEffect(() => {
+  const handleCpuCheckBox = (value) => {
+    if (cpuValues.current.includes(value)) {
+      cpuValues.current = cpuValues.current.filter((val) => val !== value);
+    } else {
+      cpuValues.current.push(value);
+    }
+
     let tempArray = [];
-    if (cpuValues.length > 0) {
-      cpuValues.forEach((val) => {
+    if (cpuValues.current.length > 0) {
+      cpuValues.current.forEach((val) => {
         tempArray.push(
           ...products.filter((prod) => prod.detail.CPUmodel.includes(val))
         );
       });
       setProducts(tempArray);
     }
-  }, [cpuValues, products, setProducts]);
+  };
 
-  useEffect(() => {
+  const handleMemoryCheckBox = (value) => {
+    if (memoryValues.current.includes(value)) {
+      memoryValues.current = memoryValues.current.filter(
+        (val) => val !== value
+      );
+    } else {
+      memoryValues.current.push(value);
+    }
+
     let tempArray = [];
-    if (memoryValues.length > 0) {
-      memoryValues.forEach((val) => {
+    if (memoryValues.current.length > 0) {
+      memoryValues.current.forEach((val) => {
         tempArray.push(
           ...products.filter((prod) => prod.detail.computerMemorySize === val)
         );
       });
       setProducts(tempArray);
     }
-  }, [memoryValues, products, setProducts]);
+  };
 
-  useEffect(() => {
+  const handleOsCheckBox = (value) => {
+    if (osValues.current.includes(value)) {
+      osValues.current = osValues.current.filter((val) => val !== value);
+    } else {
+      osValues.current.push(value);
+    }
+
     let tempArray = [];
-    if (osValues.length > 0) {
-      osValues.forEach((val) => {
+    if (osValues.current.length > 0) {
+      osValues.current.forEach((val) => {
         tempArray.push(
           ...products.filter((prod) =>
             prod.detail.operatingSystem.includes(val)
@@ -79,42 +109,6 @@ const Filter = (props) => {
         );
       });
       setProducts(tempArray);
-    }
-  }, [osValues, products, setProducts]);
-
-  const handlePriceCheckBox = (value) => {
-    setPriceValues([...value.split('-')]);
-  };
-
-  const handleScreenSizeCheckBox = (value) => {
-    if (screenSizeValues.includes(value)) {
-      setScreenSizeValues((prev) => prev.filter((val) => val !== value));
-    } else {
-      setScreenSizeValues((prev) => [...prev, value]);
-    }
-  };
-
-  const handleCpuCheckBox = (value) => {
-    if (cpuValues.includes(value)) {
-      setCpuValues((prev) => prev.filter((val) => val !== value));
-    } else {
-      setCpuValues((prev) => [...prev, value]);
-    }
-  };
-
-  const handleMemoryCheckBox = (value) => {
-    if (memoryValues.includes(value)) {
-      setMemoryValues((prev) => prev.filter((val) => val !== value));
-    } else {
-      setMemoryValues((prev) => [...prev, value]);
-    }
-  };
-
-  const handleOsCheckBox = (value) => {
-    if (osValues.includes(value)) {
-      setOsValues((prev) => prev.filter((val) => val !== value));
-    } else {
-      setOsValues((prev) => [...prev, value]);
     }
   };
 
