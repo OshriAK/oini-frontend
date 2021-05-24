@@ -15,9 +15,9 @@ import './Home.css';
 
 const Home = () => {
   const productList = useSelector((state) => state.productList);
-  const dispatch = useDispatch();
   const { loading, error, products } = productList;
   const [filteredProducts, setFilteredProducts] = useState();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(listProducts());
@@ -31,7 +31,7 @@ const Home = () => {
     <div className="home-container">
       <TopBoard />
       {loading ? (
-        <LoadingBox></LoadingBox>
+        <LoadingBox />
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : filteredProducts ? (

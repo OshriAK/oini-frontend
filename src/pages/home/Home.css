@@ -18,10 +18,12 @@
   justify-content: flex-start;
   align-items: flex-start;
   min-width: 95vw;
+  margin: 10px;
 }
 
 .home-filters {
-  margin-top: 90px;
+  margin-top: 80px;
+  margin-right: 20px;
   background-color: var(--primaryColor);
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -29,9 +31,9 @@
 
 .home-productsList {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 
 .home-container-title {

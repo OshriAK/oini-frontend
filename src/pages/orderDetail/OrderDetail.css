@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  /* align-items: center; */
   min-height: 81vh;
 }
 
@@ -11,6 +11,7 @@
   padding: 12px;
   background-color: var(--primaryColor);
   border-radius: 6px;
+  text-align: center;
 }
 
 .orderDetail-row1 {
@@ -82,13 +83,13 @@
   border-radius: 6px;
   border: 1px solid black;
   padding: 8px 16px;
-  margin-top: 20px;
-  width: 300px;
+  margin-top: 30px;
+  height: 90px;
 }
 
 .orderDetail-totalPrice > div {
-  font-size: 24px;
-  margin: 6px;
+  font-size: 28px;
+  padding: 8px;
 }
 
 /* --------------------------------------------------------------------------- */
@@ -96,6 +97,10 @@
 @media (max-width: 960px) {
   .orderDetail-container {
     min-height: 75vh;
+  }
+
+  .orderDetail-container > h2 {
+    font-size: 18px;
   }
 
   .orderDetail-row1 {
@@ -118,13 +123,19 @@
   }
 
   .orderDetail-totalPrice {
-    padding: 4px 8px;
-    margin-top: 10px;
-    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primaryColor);
+    border-radius: 6px;
+    border: 1px solid black;
+    padding: 8px 16px;
+    margin-top: 20px;
+    height: 60px;
   }
 
   .orderDetail-totalPrice > div {
-    font-size: 22px;
-    margin: 6px;
+    font-size: 23px;
+    padding: 6px;
   }
 }

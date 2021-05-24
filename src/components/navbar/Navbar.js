@@ -20,7 +20,7 @@ const Navbar = ({ click }) => {
     <nav className="navbar">
       {/* logo */}
       <NavLink to="/" className="navbar__logo">
-        <h2>OiNi</h2>
+        <h1>OiNi</h1>
       </NavLink>
 
       {/* links */}

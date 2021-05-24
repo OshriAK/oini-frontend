@@ -5,7 +5,7 @@ import './ProductInOrder.css';
 
 const ProductInCart = ({ img, name, price, qty, id }) => {
   return (
-    <div className="productInCart-container">
+    <div className="productInOrder-container">
       <img src={`../${img}`} alt={name} />
       <Link to={`/productDetail/${id}`}>{name}</Link>
       <h3>כמות: {qty}</h3>

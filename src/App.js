@@ -21,6 +21,7 @@ import OrderHistory from './pages/orderHistory/OrderHistory';
 import Profile from './pages/profile/Profile';
 import Taknon from './pages/takanon/Taknon';
 import AddProduct from './pages/addProduct/AddProduct';
+import BenefitDetail from './pages/benefitDetail/BenefitDetail';
 
 import './App.css';
 
@@ -49,6 +50,9 @@ function App() {
             </Route>
             <Route path="/productDetail/:id">
               <ProductDetail />
+            </Route>
+            <Route path="/benefitDetail/:id">
+              <BenefitDetail />
             </Route>
             <Route path="/shippingAddress">
               <ShippingAddress />

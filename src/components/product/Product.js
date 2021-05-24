@@ -27,7 +27,6 @@ const Product = ({
     dispatch(addToCart(id, 1));
     history.push('/cart');
   };
-
   return (
     <div className="product-container">
       <img src={img} alt={name} />

@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory, useParams } from 'react-router';
-
 import { detailsProduct } from '../../redux/actions/productActions';
+import { addToCart } from '../../redux/actions/cartActions';
 
 //Components
 import MessageBox from '../../components/messageBox/MessageBox';
 import LoadingBox from '../../components/loadingBox/LoadingBox';
 
 import './ProductDetail.css';
-import { addToCart } from '../../redux/actions/cartActions';
 
 const ProductDetail = () => {
   const dispatch = useDispatch();
@@ -30,7 +29,7 @@ const ProductDetail = () => {
   return (
     <div>
       {loading ? (
-        <LoadingBox></LoadingBox>
+        <LoadingBox />
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (

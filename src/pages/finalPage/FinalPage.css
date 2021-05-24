@@ -25,6 +25,7 @@
   background-color: var(--primaryColor);
   font-size: 18px;
   margin-left: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .finalPage-address > div {
@@ -43,6 +44,7 @@
   border: 1px solid black;
   background-color: var(--primaryColor);
   font-size: 18px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .finalPage-payment > div {
@@ -61,6 +63,7 @@
   border-radius: 6px;
   border: 1px solid black;
   background-color: var(--primaryColor);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .finalPage-totalPrice {
@@ -73,6 +76,7 @@
   padding: 8px 16px;
   margin-top: 20px;
   width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .finalPage-totalPrice > div {
@@ -81,17 +85,24 @@
 }
 
 .finalPage-finalApprove-button {
-  margin: 26px 0px;
-  padding: 20px 120px;
-  font-size: 22px;
-  font-weight: bold;
-  background-color: var(--color2);
-  border: 1px solid black;
+  padding: 16px 160px;
+  border: 3px solid var(--color2);
   border-radius: 6px;
+  font-size: 26px;
+  cursor: pointer;
+  background-color: var(--color2);
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.3s;
+  margin-top: 10px;
+  color: white;
+  margin: 22px;
 }
 
 .finalPage-finalApprove-button:hover {
-  background-color: green;
+  background-color: white;
+  color: var(--color2);
+  border: 3px solid var(--color2);
 }
 
 /* --------------------------------------------------------------------------- */

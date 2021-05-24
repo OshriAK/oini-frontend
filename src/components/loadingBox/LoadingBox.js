@@ -4,7 +4,7 @@ import './LoadingBox.css';
 
 const LoadingBox = () => {
   return (
-    <div>
+    <div className="loadingbox-container">
       <i className="fa fa-spinner fa-spin" />
     </div>
   );

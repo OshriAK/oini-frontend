@@ -1,0 +1,100 @@
+.benefitsInCart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 230px;
+  height: 230px;
+}
+
+.benefitsInCart-img-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefitsInCart-img-name > img {
+  height: 100px;
+}
+
+.BenefitInCart-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.BenefitInCart-cart-button {
+  padding: 7px 18px;
+  border: 2px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: rgb(121, 179, 212);
+  color: white;
+  margin-top: 10px;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 18px;
+}
+
+.BenefitInCart-cart-button:hover {
+  border: 2px solid rgb(121, 179, 212);
+  background-color: white;
+  color: rgb(121, 179, 212);
+}
+
+.BenefitInCart-detail-button {
+  padding: 7px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: white;
+  color: rgb(121, 179, 212);
+  font-weight: bold;
+  border: 2px solid rgb(121, 179, 212);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 12px;
+  text-decoration: none;
+}
+
+.BenefitInCart-detail-button:hover {
+  border: 2px solid white;
+  background-color: rgb(121, 179, 212);
+  color: white;
+}
+
+@media (max-width: 960px) {
+  .benefitsInCart-container {
+    padding: 8px;
+    margin: 8px;
+    width: 200px;
+    height: 200px;
+    font-size: 14px;
+  }
+
+  .benefitsInCart-img-name {
+    font-size: 14px;
+  }
+
+  .benefitsInCart-img-name > img {
+    height: 80px;
+  }
+
+  .BenefitInCart-cart-button {
+    padding: 6px 14px;
+    border: 2px solid rgb(121, 179, 212);
+    font-size: 16px;
+  }
+
+  .BenefitInCart-detail-button {
+    padding: 6px 14px;
+    border: 2px solid rgb(121, 179, 212);
+    font-size: 16px;
+  }
+}
