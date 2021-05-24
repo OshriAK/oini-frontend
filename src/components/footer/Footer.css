@@ -25,21 +25,47 @@
 
 .contact-us-title {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
   margin: 10px;
 }
 
 .contact-phoneNumber {
-  font-size: 18px;
-  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 20px;
 }
+
+.contact-phoneNumber > i {
+  margin-left: 15px;
+}
+
+.fa-whatsapp {
+  font-size: 27px;
+  color: green;
+}
+
 .contact-email {
-  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.contact-email > i {
+  margin-left: 15px;
+}
+
+.fa-envelope-square {
+  font-size: 27px;
+  color: grey;
 }
 
 .contact-us-title-takanon {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
   margin: 10px 0px;
   cursor: pointer;
 }
@@ -52,9 +78,10 @@
   border-top: 1px solid black;
   padding: 14px 0px;
   margin: 14px 0px;
-  font-size: 17px;
+  font-size: 18px;
   width: 70vw;
   text-align: center;
+  font-weight: bold;
 }
 
 @media (max-width: 960px) {
@@ -72,6 +99,5 @@
   .footer-reserve {
     padding: 12px 0px;
     margin: 6px 0px;
-    font-size: 17px;
   }
 }
