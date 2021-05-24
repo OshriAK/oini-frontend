@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../../redux/actions/productActions';
 
@@ -18,6 +18,7 @@ const Home = () => {
   const { loading, error, products } = productList;
   const [filteredProducts, setFilteredProducts] = useState();
   const dispatch = useDispatch();
+  const productsToSearch = useRef();
 
   useEffect(() => {
     dispatch(listProducts());
@@ -25,6 +26,14 @@ const Home = () => {
 
   useEffect(() => {
     setFilteredProducts(products);
+  }, [products]);
+
+  useEffect(() => {
+    if (products) {
+      productsToSearch.current = products.filter(
+        (prod) => prod.category.toLowerCase() !== 'benefits'
+      );
+    }
   }, [products]);
 
   return (
@@ -37,15 +46,21 @@ const Home = () => {
       ) : filteredProducts ? (
         <>
           <div className="home-sortSeatch">
-            <Search products={products} setProducts={setFilteredProducts} />
+            <Search
+              products={productsToSearch.current}
+              setProducts={setFilteredProducts}
+            />
             <SortProduct
-              products={products}
+              products={productsToSearch.current}
               setProducts={setFilteredProducts}
             />
           </div>
           <div className="home-row1">
             <div className="home-filters">
-              <Filter products={products} setProducts={setFilteredProducts} />
+              <Filter
+                products={productsToSearch.current}
+                setProducts={setFilteredProducts}
+              />
             </div>
             <div className="home-productsList">
               <h2 className="home-container-title">מחשבים ניידים</h2>
